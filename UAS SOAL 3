@@ -1,0 +1,95 @@
+
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CGV {
+
+    private String IDMovie;
+    private int JumTiket;
+    private String MovieName;
+    private int MoviePrice;
+    private String Userrname;
+
+    public String getIDMovie() {
+        return IDMovie;
+    }
+
+    public int getJumTiket() {
+        return JumTiket;
+    }
+
+    public String getMovieName() {
+        return MovieName;
+    }
+
+    public int getMoviePrice() {
+        return MoviePrice;
+    }
+
+    public String getUserrname() {
+        return Userrname;
+    }
+
+
+
+
+
+
+    public CGV(){
+
+    }
+    private void TotalJumlahPenonton(ArrayList<CGV>nontonApa, String avatar){
+
+    }
+    public CGV(String setIdMovie, int setJumticket, String setMoviename, int setMovieprice, String setUsserName){
+        this.IDMovie = setIdMovie;
+        this.JumTiket = setJumticket;
+        this.MovieName = setMoviename;
+        this.MoviePrice = setMovieprice;
+        this.Userrname = setUsserName;
+    }
+
+
+
+    public void main (String[] args){
+        int jumUser = 20;
+        Scanner sc = new Scanner(System.in);
+        ArrayList<CGV> nontonApa = new ArrayList<>();
+        System.out.println("Filem yang akan ditoton : ");
+        String movieSelect = sc .nextLine();
+        ArrayList<String> myUser1 = new ArrayList<>();
+        CGV pesanan = new CGV();
+        for(int index=0; index<jumUser;index++){
+            System.out.println("Nama User : ");
+            String myUser = sc .nextLine();
+            myUser1.add(myUser);
+            pesanan .setIDMovie("1");
+            pesanan .setJumTiket(jumUser);
+            pesanan .setMovieName(movieSelect);
+            pesanan .setMoviePrice(55000);
+            pesanan .setUserrname("myUser1");
+            nontonApa .add(pesanan);
+
+        }
+        pesanan .TotalJUmlahPenonton(nontonApa, "Avatar");
+    }
+
+    private void TotalJUmlahPenonton(ArrayList<CGV> nontonApa, String avatar) {
+    }
+
+    private void setUserrname(String myUser) {
+    }
+
+    private void setMovieName(String movieSelect) {
+    }
+
+    private void setMoviePrice(int i) {
+    }
+
+    private void setJumTiket(int jumUser) {
+    }
+
+    private void setIDMovie(String s) {
+    }
+}
